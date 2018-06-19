@@ -207,7 +207,7 @@ public class AndroidWifiModule extends ReactContextBaseJavaModule {
 		WifiConfiguration conf = new WifiConfiguration();
 		
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-        conf.SSID = ssid;
+        conf.SSID = "\"" + ssid + "\"";
     } else {
         conf.SSID = "\"" + ssid + "\"";
     }
